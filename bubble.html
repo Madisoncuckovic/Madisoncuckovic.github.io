@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cushy Tea Home</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+    .container{
+        width: 100;
+        min-height: 100vh;
+        padding-left: 8%;
+        padding-right: 8%;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+      
+      .navbar{
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+      
+      .logo{
+        width: 50px;
+      cursor: pointer;
+      margin: 30px 0;
+      }
+      
+      .menu-icon{
+        width: 25px;
+        cursor: pointer;
+        display: none; 
+      }
+      
+      nav{
+        flex: 1;
+        text-align: right;
+      }
+      
+      nav ul li{
+        list-style: none;
+        display: inline-block;
+        margin-right: 30px;
+      }
+      
+      nav ul li a{
+       text-decoration: none;
+       color: #000;
+       font-size: 14px;
+      }
+      
+      nav ul li a:hover{
+       color: #71A0C2; 
+      }
+
+
+
+
+      @media only screen and (max-width: 700px){
+  nav ul{
+    width: 100%;
+    background: tan;
+    position: absolute;
+    top: 75px;
+    right: 0;
+    z-index: 2;
+  }
+  nav ul li{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  nav ul li a{
+    color: #fff;  
+  }
+  .menu-icon{
+    display: block;
+  }
+  #menuList{
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+
+
+  .row{
+    flex-direction: column-reverse;
+    margin: 50px 0;
+  }
+  .col-2{
+flex-basis: 100%;
+margin-bottom: 50px;
+  }
+  .col-2 .boba{
+    width: 77%;
+  }
+  .color-box{
+    transform: translateX(75px);
+  }
+  .col-1{
+    flex-basis: 100%;
+  }
+  .col-1 h2{
+    font-size: 35px;
+  }
+  .col-1 h3{
+    font-size: 35px;
+  }
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.wrapper{
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden; 
+}
+
+
+      .social-links img{
+height: 25px;
+margin: 20px;
+cursor: pointer;
+}
+
+.social-links{
+  text-align: center;
+}
+
+.row{
+    width:100%;
+    padding: 50px 100px;  
+}
+.image-section{
+    width: 30%;
+    float: left;
+    
+}
+
+img{
+    border-radius: 15%;
+}
+.image-section img{
+    width: 100%;
+    height: auto;
+}
+.content{
+    width:60%;
+    float:left;
+    margin-left: 50px;
+}
+.content h1{
+    font-size: 90px;
+    letter-spacing: 3.5px;
+margin-top: 25px;
+}
+
+.content h2{
+    font-size: 40px;
+    color: #71A0C2;
+    margin-top: 25px;
+}
+.content p{
+    font-size: 20px;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+@media screen and (max-width: 768px){
+    .image-section{
+        width: 100%;
+        float: none;
+    }
+    .content{
+    width:100%;
+    float:none;
+    margin-left: 0px;
+}
+}
+
+
+    </style>
+
+</head>
+<body>
+<div class="container">
+<div class="navbar">
+  <img src="bobatea.png" class="logo">
+  <h1>Cushy Tea</h1>
+
+  <nav>
+    <ul id="menuList">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="bubble.html">Bubble Tea?</a></li>
+    <li><a href="order.html">Order Now</a></li>
+    <li><a href="merch.html">Merchandise</a></li>
+  </ul>
+  </nav>
+
+    <img src="48px.png" class="menu-icon" onclick="togglemenu()">
+  </div>
+
+
+<div class="wrapper">
+    <div class="rows">
+        <div class="image-section">
+            <img src="coffee.png" alt="strawberry">
+        </div>
+        <div class="content">
+            <h1>What Is Bubble Tea?</h1>
+            <h2>Cushy Tea</h2>
+            <p>Bubble tea is a tea-based drink that originated in Taiwan in the early 1980s. Taiwanese migrants brought it to the United States in the 1990s, initially in California through regions like Los Angeles county, but has likewise spread to other countries where there is a large East Asian diasporic population.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+  <div class="social-links">
+    <img src="facebook.png">
+    <img src="twitter.png">
+    <img src="instagram.png">
+    
+    </div>
+
+
+
+    <script>
+        var menuList = document.getElementById("menuList");
+        menuList.style.maxHeight = "0px";
+        function togglemenu(){
+      
+      if(menuList.style.maxHeight == "0px")
+      {
+        menuList.style.maxHeight = "155px";
+      }
+      else
+      {
+        menuList.style.maxHeight = "0px";
+      }
+      
+        }
+      </script>
+      
+        </body>
+      </html>

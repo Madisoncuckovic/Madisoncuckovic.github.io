@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cushy Tea Home</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+    .container{
+        width: 100;
+        min-height: 100vh;
+        padding-left: 8%;
+        padding-right: 8%;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+      
+      .navbar{
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+      
+      .logo{
+        width: 50px;
+      cursor: pointer;
+      margin: 30px 0;
+      }
+      
+      .menu-icon{
+        width: 25px;
+        cursor: pointer;
+        display: none; 
+      }
+      
+      nav{
+        flex: 1;
+        text-align: right;
+      }
+      
+      nav ul li{
+        list-style: none;
+        display: inline-block;
+        margin-right: 30px;
+      }
+      
+      nav ul li a{
+       text-decoration: none;
+       color: #000;
+       font-size: 14px;
+      }
+      
+      nav ul li a:hover{
+       color: #71A0C2; 
+      }
+
+      img{
+    border-radius: 15%;
+      }
+
+
+      @media only screen and (max-width: 700px){
+  nav ul{
+    width: 100%;
+    background: tan;
+    position: absolute;
+    top: 75px;
+    right: 0;
+    z-index: 2;
+  }
+  nav ul li{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  nav ul li a{
+    color: #fff;  
+  }
+  .menu-icon{
+    display: block;
+  }
+  #menuList{
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+
+
+  .row{
+    flex-direction: column-reverse;
+    margin: 50px 0;
+  }
+  .col-2{
+flex-basis: 100%;
+margin-bottom: 50px;
+  }
+  .col-2 .boba{
+    width: 77%;
+  }
+  .color-box{
+    transform: translateX(75px);
+  }
+  .col-1{
+    flex-basis: 100%;
+  }
+  .col-1 h2{
+    font-size: 35px;
+  }
+  .col-1 h3{
+    font-size: 35px;
+  }
+}
+
+.items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px 20px;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+}
+.item img{
+width: 100%;
+height: 550px;
+object-fit: cover;
+cursor: pointer;
+transition: 0.2s ease;
+}
+.item img:hover{
+    transform: scale(1.04);
+}
+.item h4{
+    padding: 5px;
+    text-align: center;
+}
+.item button{
+    padding: 5px 30px;
+border: none;
+outline: none;
+background-color: #71A0C2;
+color: white;
+cursor: pointer;
+border-radius: 4px;
+font-size: 20px;
+display: block;
+margin: 0 auto;
+transition: 0.2s all;
+}
+.item button:hover{
+    transform: scale(1.08);
+}
+@media screen and (max-width: 768px){
+    .items{
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+}
+
+
+
+
+      .social-links img{
+height: 25px;
+margin: 20px;
+cursor: pointer;
+}
+
+.social-links{
+  text-align: center;
+}
+
+
+
+
+
+
+
+    </style>
+
+</head>
+<body>
+<div class="container">
+<div class="navbar">
+  <img src="bobatea.png" class="logo">
+  <h1>Cushy Tea</h1>
+
+  <nav>
+    <ul id="menuList">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="bubble.html">Bubble Tea?</a></li>
+    <li><a href="order.html">Order Now</a></li>
+    <li><a href="merch.html">Merchandise</a></li>
+  </ul>
+  </nav>
+
+
+
+
+
+
+
+
+    <img src="48px.png" class="menu-icon" onclick="togglemenu()">
+  </div>
+
+
+
+    <section class="items">
+        <div class="item">
+            <img src="coffeeboba.png"></img>
+            <h4>Coffee Boba</h4>
+            <button>Order</button>
+        </div>
+
+        <div class="item">
+            <img src="strawboba.png"></img>
+            <h4>Strawberry Boba</h4>
+            <button>Order</button>
+        </div>
+
+
+        <div class="item">
+            <img src="mangoboba.png"></img>
+            <h4>Mango Boba</h4>
+            <button>Order</button>
+        </div>
+
+    
+
+    </section>
+
+    <div class="social-links">
+        <img src="facebook.png">
+        <img src="twitter.png">
+        <img src="instagram.png">
+        
+        </div>
+    <script>
+        var menuList = document.getElementById("menuList");
+        menuList.style.maxHeight = "0px";
+        function togglemenu(){
+      
+      if(menuList.style.maxHeight == "0px")
+      {
+        menuList.style.maxHeight = "155px";
+      }
+      else
+      {
+        menuList.style.maxHeight = "0px";
+      }
+      
+        }
+      </script>
+      
+        </body>
+      </html>
